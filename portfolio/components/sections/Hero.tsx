@@ -18,6 +18,8 @@ export default function Hero() {
   const scrollHintRef = useRef<HTMLDivElement>(null);
   const videoSrc = '/hero.mp4';
 
+  const [hasInteracted, setHasInteracted] = useState(false);
+
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
     tl.fromTo(eyebrowRef.current, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.7 }, 0.4)
@@ -120,9 +122,16 @@ export default function Hero() {
               className={styles.video}
               src={videoSrc}
               autoPlay
-              loop
+              muted={!hasInteracted}
               playsInline
-              preload="metadata"
+              preload="auto"
+              onClick={() => {
+                setHasInteracted(true)
+                if (videoRef.current) {
+                  videoRef.current.muted = false
+                  videoRef.current.play()
+                }
+              }}
               onError={handleVideoError}
             />
           ) : (
