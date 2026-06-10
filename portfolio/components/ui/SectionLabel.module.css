@@ -1,0 +1,26 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.label.center {
+  justify-content: center;
+}
+
+.line {
+  width: 48px;
+  height: 1px;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+
+.label span {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--orange);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
