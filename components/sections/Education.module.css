@@ -1,0 +1,135 @@
+.education {
+  position: relative;
+  z-index: 1;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 3rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+}
+
+.accent {
+  color: var(--orange);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  padding: 2.5rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.card:hover {
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.07), transparent 70%);
+  pointer-events: none;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--orange-dim);
+  border: 1px solid rgba(255, 107, 53, 0.28);
+  border-radius: 16px;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.body {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.degree {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--orange);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.institution {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.field {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+}
+
+.metaDot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+@media (max-width: 860px) {
+  .inner {
+    padding: 5rem 1.5rem;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.75rem;
+  }
+}
